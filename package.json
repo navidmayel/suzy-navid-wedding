@@ -1,0 +1,22 @@
+{
+  "name": "suzy-navid-wedding",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^2.2.0",
+    "@astrojs/tailwind": "^3.1.1",
+    "astro": "^2.1.8",
+    "circletype": "^2.3.0",
+    "dayjs": "^1.11.7",
+    "luxon": "^3.3.0",
+    "motion": "^10.15.5",
+    "tailwindcss": "^3.2.7"
+  }
+}

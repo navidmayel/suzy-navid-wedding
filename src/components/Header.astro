@@ -1,0 +1,39 @@
+---
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime';
+dayjs.extend(relativeTime);
+const weddingDay = dayjs('2023-06-15');
+const date = Date.now();
+---
+
+<header class="header border-b-2">
+  <div class="flex justify-between time-text">
+    <div class="wedding-text text-white p-2 md:text-xl tracking-wide" id="date-text-1">You're invited</div>
+    <div class="wedding-text text-white p-2 md:text-xl tracking-wide" id="date-text-2">to our wedding</div>
+    <div class="wedding-text text-white p-2 md:text-xl tracking-wide" id="date-text-3">{dayjs(date).to(weddingDay)}</div>
+  </div>
+</header>
+
+<style>
+  .header {
+    border-color: #D46A53;
+  }
+    .wedding-text {
+      font-family: 'Karla', serif;
+      font-weight: 400;
+      color: #D46A53;
+      text-align: center;
+    }
+</style>
+
+<script>
+import {timeline} from 'motion';
+let sequence = [
+  ['.header', {y: [-50, 0]}, {duration: 1, delay: 0} ],
+  ['#date-text-1', {y: [-60, 0],}, {duration: 0.7, at: 1}],
+  ['#date-text-2', {y: [-60, 0],}, {duration: 0.7, at: 2}],
+  ['#date-text-3', {y: [-60, 0],}, {duration: 0.7, at: 3}],
+]
+timeline(sequence);
+
+</script>

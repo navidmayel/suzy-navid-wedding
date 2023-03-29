@@ -1,0 +1,72 @@
+---
+import Rsvp from "./Rsvp.astro";
+const {ceremony} = Astro.props;
+---
+<div class="flex justify-center w-screen h-screen lg:h-full">
+    <div class="card md:border-2 w-screen md:w-6/12 mt-10 mb-4 text-white rounded-t-full flex justify-center content-center min-w-max min-h-full">
+      <div class="md:pt-28 card-text flex flex-col justify-center">
+        <h2 class="heading-text text-7xl pb-4">Suzy <br> & Navid</h2>
+        <h3 class="date-text text-2xl border-b-2 mb-4 pb-6">Thursday 15 June 2023, 2:30pm</h3>
+      <div class={`ceremony pb-6 ceremony-text ${ceremony && 'hidden'}`}>
+        <h4 class="text-lg">Ceremony</h4>
+        <p>The Old Marylebone Town Hall, 97-113 Marylebone Rd<br>
+          London, NW1 5PT<br>
+          <span class="arrival italic">Arrive 2pm for a 2.30pm ceremony</span></p>
+      </div>
+      <div class="reception reception-text pb-6">
+        <h4 class="text-lg">Reception (13 mins walk from the ceremony)</h4>
+        <p>The Italian Greyhound, 62 Seymour St<br>
+          London, W1H 5BN</p>
+      </div>
+      <Rsvp></Rsvp>
+    </div>
+  </div>
+</div>
+
+<style>
+  h2 {
+    font-family: 'Brown Sugar', serif;
+  }
+
+  h3, h4 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+  }
+
+  .date-text {
+    font-family: 'Canela Light', serif;
+  }
+
+  p {
+    font-family: 'Karla', sans-serif;
+    font-weight: 300;
+  }
+  .card {
+    background-color: #F29979;
+    box-shadow: 0 3px 10px rgb(0,0,0,0.2);
+    border-color: #D46A53;
+    min-width: 300px;
+    max-width: 600px;
+  }
+
+  .arrival {
+    font-family: 'Karla';
+    font-weight: 300;
+  }
+</style>
+
+<script>
+  import {timeline} from 'motion';
+ 
+
+  const sequence = [
+    ['.card', {x: [-1200, 0]}, {duration: 2, delay: 4}],
+    ['.heading-text', {x: [-1000, 0]}, {duration: 2, at: +4}],
+    ['.date-text', {x: [-1000, 0]}, {duration: 2, at: +4.5}],
+    ['.ceremony-text', {x: [-1000, 0]}, {duration: 2, at: +5}],
+    ['.reception-text', {x: [-1000, 0]}, {duration: 2, at: +5.5}]
+
+
+  ]
+  timeline(sequence)
+</script>

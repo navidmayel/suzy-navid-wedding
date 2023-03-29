@@ -1,0 +1,42 @@
+---
+import Header from "../components/Header.astro";
+const {title} = Astro.props;
+---
+
+<html lang="en">
+	<!-- 
+      ___           ___                   
+     /\  \         /\  \          ___     
+     \:\  \       /::\  \        /\  \    
+      \:\  \     /:/\:\  \       \:\  \   
+  _____\:\  \   /:/ /::\  \       \:\  \  
+ /::::::::\__\ /:/_/:/\:\__\  ___  \:\__\ 
+ \:\~~\~~\/__/ \:\/:/  \/__/ /\  \ |:|  | 
+  \:\  \        \::/__/      \:\  \|:|  | 
+   \:\  \        \:\  \       \:\__|:|__| 
+    \:\__\        \:\__\       \::::/__/  
+     \/__/         \/__/        ~~~~      
+
+
+	 -->
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="box-border h-screen w-screen">
+    <Header></Header>
+		<slot/>
+	</body>
+</html>
+
+<style>
+  body {
+		background-color: rgba(212,106,83, 0.4);
+  }
+</style>
