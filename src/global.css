@@ -1,7 +1,8 @@
 @font-face {
-  font-family: 'Brown Sugar';
-  src: url('/public/fonts/Brown Sugar.woff2') format(woff2),
-       url('/public/fonts/Brown Sugar.woff') format(woff);
+  font-family: 'brown_sugarregular';
+  src: url('/public/fonts/brown_sugar-webfont.woff2') format('woff2'),
+       url('/public/fonts/brown_sugar-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+
 }
