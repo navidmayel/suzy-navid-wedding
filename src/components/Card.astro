@@ -7,7 +7,7 @@ const {ceremony} = Astro.props;
       <div class="mx-8 card-text flex flex-col justify-center">
         <h2 class="heading-text text-7xl pt-14">Suzy <br> & Navid</h2>
         <h6 class="heading-text text-3xl pb-4">are getting married!</h6>
-        <h3 class="date-text text-2xl border-b-2 mb-4 pb-6 tracking-wide">{ceremony ? `Thursday 15 June 2023, 2:00pm` : `Thursday 15 June 2023, 4:00pm`}</h3>
+        <h3 class="date-text text-2xl border-b-2 mb-4 pb-6 tracking-wide">{!ceremony ? `Thursday 15 June 2023, 2:00pm` : `Thursday 15 June 2023, 4:00pm`}</h3>
       <div class={`ceremony pb-6 ceremony-text ${ceremony && 'hidden'}`}>
         <h4 class="text-lg">Ceremony</h4>
         <p>The Old Marylebone Town Hall, 97-113 Marylebone Rd<br>
