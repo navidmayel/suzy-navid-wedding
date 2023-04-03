@@ -6,17 +6,18 @@ const {ceremony} = Astro.props;
     <div class="card md:border-2 w-screen md:w-6/12 mt-10 mb-4 text-white rounded-t-full flex justify-center content-center min-w-max min-h-full">
       <div class="mx-8 md:pt-28 card-text flex flex-col justify-center">
         <h2 class="heading-text text-7xl pt-14 pb-4">Suzy <br> & Navid</h2>
-        <h3 class="date-text text-2xl border-b-2 mb-4 pb-6 tracking-wide">Thursday 15 June 2023, 2:30pm</h3>
+        <h3 class="date-text text-2xl border-b-2 mb-4 pb-6 tracking-wide">Thursday 15 June 2023, 2:00pm</h3>
       <div class={`ceremony pb-6 ceremony-text ${ceremony && 'hidden'}`}>
         <h4 class="text-lg">Ceremony</h4>
         <p>The Old Marylebone Town Hall, 97-113 Marylebone Rd<br>
           London, NW1 5PT<br>
-          <span class="arrival italic">Arrive 2pm for a 2.30pm ceremony</span></p>
+          <span class="arrival italic">Please arrive at 2pm</span></p>
       </div>
       <div class="reception reception-text pb-6">
-        <h4 class="text-lg">Reception (13 mins walk from the ceremony)</h4>
+        <h4 class="text-lg">Reception</h4>
         <p>The Italian Greyhound, 62 Seymour St<br>
-          London, W1H 5BN</p>
+          London, W1H 5BN
+          <span class="arrival italic">Please arrive at 2pm</span></p>
       </div>
       <Rsvp></Rsvp>
     </div>
